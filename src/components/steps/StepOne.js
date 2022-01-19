@@ -19,7 +19,7 @@ const StepOne = ({ goToNext, goToPrev }) => {
     <Fragment>
       <ProgressContainer>
         <Progress />
-        <Circle>1</Circle>
+        <Circle marked>1</Circle>
         <Circle>2</Circle>
         <Circle>3</Circle>
       </ProgressContainer>

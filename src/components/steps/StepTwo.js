@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import {
-  Button,
   Circle,
   NextButton,
   PrevButton,
@@ -25,9 +24,9 @@ const StepTwo = ({ goToNext, goToPrev }) => {
   return (
     <Fragment>
       <ProgressContainer>
-        <Progress />
-        <Circle>1</Circle>
-        <Circle>2</Circle>
+        <Progress step1 />
+        <Circle marked>1</Circle>
+        <Circle marked>2</Circle>
         <Circle>3</Circle>
       </ProgressContainer>
       <PrevButton onClick={() => goToPrev()}>Back</PrevButton>

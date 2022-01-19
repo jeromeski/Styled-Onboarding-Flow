@@ -34,7 +34,11 @@ const UncontrolledOnboardingFlow = ({ children, onFinish }) => {
 
   const currentChild = React.Children.toArray(children)[currentIndex];
   if (React.isValidElement(currentChild)) {
-    return React.cloneElement(currentChild, { goToNext, goToPrev });
+    return React.cloneElement(currentChild, {
+      goToNext,
+      goToPrev,
+      currentIndex
+    });
   }
   return currentChild;
 };

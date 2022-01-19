@@ -42,6 +42,16 @@ export const Progress = styled.div`
   width: 0%;
   z-index: -1;
   transition: 0.4s ease;
+  ${({ step1 }) =>
+    step1 &&
+    css`
+      width: 50%;
+    `}
+  ${({ step2 }) =>
+    step2 &&
+    css`
+      width: 100%;
+    `}
 `;
 
 export const Circle = styled.div`
@@ -55,6 +65,11 @@ export const Circle = styled.div`
   justify-content: center;
   border: 3px solid #e0e0e0;
   z-index: 1;
+  ${({ marked }) =>
+    marked &&
+    css`
+      border-color: ${lineBorderFill};
+    `}
 `;
 
 export const NextButton = styled(Button)`

@@ -17,17 +17,19 @@ const data = {
   }
 };
 
-const StepThree = ({ goToNext, goToPrev }) => {
+const StepThree = ({ goToNext, goToPrev, currentIndex }) => {
   return (
     <Fragment>
       <ProgressContainer>
-        <Progress />
-        <Circle>1</Circle>
-        <Circle>2</Circle>
-        <Circle>3</Circle>
+        <Progress step2 />
+        <Circle marked>1</Circle>
+        <Circle marked>2</Circle>
+        <Circle marked>3</Circle>
       </ProgressContainer>
       <PrevButton onClick={() => goToPrev()}>Back</PrevButton>
-      <NextButton onClick={() => goToNext(data)}>Next</NextButton>
+      <NextButton onClick={() => goToNext(data)}>
+        {currentIndex === 2 ? "Submit" : "Next"}
+      </NextButton>
     </Fragment>
   );
 };
