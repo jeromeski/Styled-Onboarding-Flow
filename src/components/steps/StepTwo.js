@@ -1,4 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import {
+  Button,
+  Circle,
+  NextButton,
+  PrevButton,
+  Progress,
+  ProgressContainer
+} from "../styled.components";
 
 const data = {
   address: {
@@ -15,11 +23,16 @@ const data = {
 
 const StepTwo = ({ goToNext, goToPrev }) => {
   return (
-    <div>
-      <h1>2</h1>
-      <button onClick={goToPrev}>Back</button>
-      <button onClick={() => goToNext(data)}>Next</button>
-    </div>
+    <Fragment>
+      <ProgressContainer>
+        <Progress />
+        <Circle>1</Circle>
+        <Circle>2</Circle>
+        <Circle>3</Circle>
+      </ProgressContainer>
+      <PrevButton onClick={() => goToPrev()}>Back</PrevButton>
+      <NextButton onClick={() => goToNext(data)}>Next</NextButton>
+    </Fragment>
   );
 };
 

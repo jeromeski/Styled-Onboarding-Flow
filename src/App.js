@@ -1,6 +1,7 @@
 import StepOne from "./components/steps/StepOne";
 import StepThree from "./components/steps/StepThree";
 import StepTwo from "./components/steps/StepTwo";
+import { Container } from "./components/styled.components";
 import UncontrolledOnboardingFlow from "./components/uncontrolled/UncontrolledOnboardingFlow";
 import "./styles.css";
 
@@ -10,12 +11,12 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <Container>
       <UncontrolledOnboardingFlow onFinish={onFinish}>
         <StepOne />
         <StepTwo />
         <StepThree />
       </UncontrolledOnboardingFlow>
-    </div>
+    </Container>
   );
 }
